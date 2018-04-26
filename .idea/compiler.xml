@@ -9,8 +9,5 @@
         <module name="HmWrk1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="HmWrk1" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

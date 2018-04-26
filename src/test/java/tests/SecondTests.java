@@ -14,7 +14,7 @@ public class SecondTests {
     WebDriver driver;
 
     @BeforeClass
-    public void beforeClass(){
+    public static void beforeClass(){
         //before class
     }
 
@@ -67,12 +67,13 @@ public class SecondTests {
 
     @After
     public void afterTest(){
-
+        driver.quit();
     }
 
     @AfterClass
-    public void afterClass(){
-        driver.quit();
+    public static void afterClass(){
+
+
     }
 
 }
