@@ -1,0 +1,7 @@
+JUnit assertions: http://junit.sourceforge.net/javadoc/org/junit/Assert.html
+assertEquals("message", expected, actual)
+assertTrue("message", condition)
+----------
+TestNG Assertions: http://static.javadoc.io/org.testng/testng/6.11/org/testng/Assert.html
+assertEquals(actual, expected, "message")
+assertTrue(condition, "message")

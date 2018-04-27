@@ -1,32 +1,30 @@
 package tests;
 
 
-import org.junit.*;
-import org.junit.runners.Suite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.testng.AssertJUnit.assertTrue;
 
-@Suite.SuiteClasses({SecondTests.class})
-public class SecondTests {
+
+public class ThirdTests {
+
     WebDriver driver;
 
     @BeforeClass
-    public static void beforeClass(){
-        //before class
+    public void beforeClass(){
+        driver = new ChromeDriver();
     }
 
-    @Before
-    public void beforeTest(){
-        //before
-    }
-
-    @Test
-    //@Ignore
+    @Test(enabled=true, groups = {"regression"}, dependsOnMethods = {"test2"})
     public void test1() throws InterruptedException {
         driver = new ChromeDriver();
         driver.get("http://book.theautomatedtester.co.uk/");
@@ -39,15 +37,15 @@ public class SecondTests {
         WebElement radioButton = driver.findElement(By.id("radiobutton"));
         radioButton.click();
 
-        assertTrue("Error Message", radioButton.isDisplayed());
+        Assert.assertTrue(radioButton.isDisplayed(), "Error Message");
 
         /*
-        check following website for more JUnit Assert functions:
-        http://junit.sourceforge.net/javadoc/org/junit/Assert.html
+        check following website for more TestNG Assert functions:
+        http://static.javadoc.io/org.testng/testng/6.11/org/testng/Assert.html
          */
 
     }
-    @Test
+    @Test(enabled=true, groups = {"sanity", "regression"}, dataProvider = "data_provider")
     public void test2() throws InterruptedException {
         driver = new ChromeDriver();
         driver.get("http://book.theautomatedtester.co.uk/");
@@ -64,21 +62,16 @@ public class SecondTests {
         WebElement chapterLink = driver.findElement(By.linkText("Chapter1"));
         String chapterLinkText = chapterLink.getText();
 
-        assertEquals("Error Message", chapterLinkText, "Chapter1");
-
-
+        assertEquals("Chapter1", chapterLinkText, "Errpr Message");
 
     }
-
-    @After
-    public void afterTest(){
+    @AfterClass
+    public void afterClass(){
         driver.quit();
     }
 
-    @AfterClass
-    public static void afterClass(){
-
-
-    }
-
+//    @DataProvider(name = "data_provider")
+//    public Object[][] dataProvider(){
+//        return new Object[][]{{"1","2"},{"2","3"}};
+//    }
 }

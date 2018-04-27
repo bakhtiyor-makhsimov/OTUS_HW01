@@ -1,0 +1,23 @@
+JUnit Annotations:
+@BeforeClass
+@Before
+@Test
+@After
+@AfterClass
+-----------
+TestNG Annotations:
+@BeforeClass
+@BeforeTest
+@Test
+@AfterTest
+@AfterClass
+
+@BeforeSuite
+@AfterSuite
+
+@BeforeMethod
+@AfterMethod
+
+@BeforeGroup
+@AfterGroup
+
