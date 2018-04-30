@@ -6,27 +6,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+//import org.testng.annotations.DataProvider;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertTrue;
+//import static org.testng.AssertJUnit.assertTrue;
 
-
+@Listeners(TestListener.class)
 public class ThirdTests {
 
     WebDriver driver;
 
     @BeforeClass
     public void beforeClass(){
+
         driver = new ChromeDriver();
     }
 
     @Test(enabled=true, groups = {"regression"}, dependsOnMethods = {"test2"})
     public void test1() throws InterruptedException {
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
         driver.get("http://book.theautomatedtester.co.uk/");
         Thread.sleep(2000);
 
@@ -39,15 +38,17 @@ public class ThirdTests {
 
         Assert.assertTrue(radioButton.isDisplayed(), "Error Message");
 
+//        driver.quit();
+
         /*
         check following website for more TestNG Assert functions:
         http://static.javadoc.io/org.testng/testng/6.11/org/testng/Assert.html
          */
 
     }
-    @Test(enabled=true, groups = {"sanity", "regression"}, dataProvider = "data_provider")
+    @Test(enabled=true, groups = {"sanity", "regression"}) //dataProvider = "data_provider"
     public void test2() throws InterruptedException {
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
         driver.get("http://book.theautomatedtester.co.uk/");
         Thread.sleep(2000);
 
@@ -63,6 +64,8 @@ public class ThirdTests {
         String chapterLinkText = chapterLink.getText();
 
         assertEquals("Chapter1", chapterLinkText, "Errpr Message");
+
+//        driver.quit();
 
     }
     @AfterClass
