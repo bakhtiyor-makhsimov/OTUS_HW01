@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac11217-ad72-43b1-b33f-1b385f222f6a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readtxt/Listeners.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readtxt/link_to_github_projects.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ThirdTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ThirdTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/SecondTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/SecondTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ThirdTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/ThirdTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +45,8 @@
       <file leaf-file-name="TestListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="-34">
+              <caret line="7" column="47" selection-start-line="7" selection-end-line="7" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#221#222#0" expanded="true" />
@@ -104,6 +102,8 @@
         <option value="$PROJECT_DIR$/readtxt/methods_bm.txt" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TestListener.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/ThirdTests.java" />
+        <option value="$PROJECT_DIR$/readtxt/Listeners.txt" />
+        <option value="$PROJECT_DIR$/readtxt/link_to_github_projects.txt" />
       </list>
     </option>
   </component>
@@ -114,7 +114,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1807" />
     <option name="y" value="112" />
     <option name="width" value="1750" />
@@ -138,28 +138,7 @@
             <path>
               <item name="HmWrk1" type="b2602c69:ProjectViewProjectNode" />
               <item name="OTUS_HW01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HmWrk1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OTUS_HW01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HmWrk1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OTUS_HW01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HmWrk1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OTUS_HW01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="readtxt" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -408,7 +387,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1829" y="90" width="1400" height="776" extended-state="1" />
+    <frame x="-1829" y="90" width="1400" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -420,11 +399,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32884902" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32884902" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963924" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963924" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -556,10 +535,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readtxt/Listeners.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="-34">
+          <caret line="7" column="47" selection-start-line="7" selection-end-line="7" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#221#222#0" expanded="true" />
@@ -569,6 +555,13 @@
             <element signature="e#716#717#0" expanded="true" />
             <element signature="e#752#753#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readtxt/link_to_github_projects.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
