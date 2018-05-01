@@ -5,22 +5,31 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 //import org.testng.annotations.DataProvider;
 
+import java.util.concurrent.TimeUnit;
+
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 //import static org.testng.AssertJUnit.assertTrue;
 
 @Listeners(TestListener.class)
 public class ThirdTests {
 
     WebDriver driver;
+    WebDriverWait webDriverWait; // Declaration of Explicit Wait
 
     @BeforeClass
     public void beforeClass(){
 
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // Implicit Wait
+        webDriverWait = new WebDriverWait(driver, 10); //Explicit Wait
     }
 
     @Test(enabled=true, groups = {"regression"}, dependsOnMethods = {"test2"})
@@ -28,6 +37,7 @@ public class ThirdTests {
 //        driver = new ChromeDriver();
         driver.get("http://book.theautomatedtester.co.uk/");
         Thread.sleep(2000);
+
 
         WebElement firstLink = driver.findElement(By.xpath("//a[text()='Chapter1']"));
         firstLink.click();
@@ -63,11 +73,37 @@ public class ThirdTests {
         WebElement chapterLink = driver.findElement(By.linkText("Chapter1"));
         String chapterLinkText = chapterLink.getText();
 
-        assertEquals("Chapter1", chapterLinkText, "Errpr Message");
+
 
 //        driver.quit();
 
     }
+
+    @Test
+    public void test3() {
+
+        driver.get("http://book.theautomatedtester.co.uk/");
+
+        WebElement firstLink = driver.findElement(By.xpath("//a[text()='Chapter1']"));
+        firstLink.click();
+
+        WebElement selectElement = driver.findElement(By.id("selecttype"));
+        Select select = new Select(selectElement);
+        select.selectByValue("Selenium Grid");
+
+        String expectedText = "The following text has been loaded from another page on this site. It has been loaded in an asynchronous fashion so that we can work through the AJAX section of this chapter";
+
+        WebElement linkAjax = driver.findElement(By.id("loadajax"));
+        linkAjax.click();
+
+        WebElement textAreaAjax = driver.findElement(By.id("ajaxdiv"));
+        assertTrue(textAreaAjax.isDisplayed());
+
+        webDriverWait.until(ExpectedConditions.textToBePresentInElement(textAreaAjax, expectedText)); //Waits up to 10 seconds until element is not present
+        assertEquals(textAreaAjax.getText(), expectedText);
+
+    }
+
     @AfterClass
     public void afterClass(){
         driver.quit();

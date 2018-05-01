@@ -1,0 +1,19 @@
+By.id()
+By.name()
+By.xpath()
+By.cssSelector()
+By.className()
+
+//*[@id="wd-_teaser"]/div/div/h1/a
+#wd-_teaser > div > div > h1 > a
+
+---------
+//a
+//a[@class='text']
+//a[contains(@class, 'text')]
+//span[text()='text']
+
+./a
+./a[@class='text']
+./a[contains(@class, 'text')]
+./span[text()='text']
