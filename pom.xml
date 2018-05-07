@@ -9,13 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+        <!-- BM- Selenium Web Driver Repository -->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.11.0</version>
         </dependency>
-
+        <!-- BM- JUnit Repository -->
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -23,7 +24,7 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- BM- TestNG Repository -->
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -36,6 +37,7 @@
 
     <build>
         <plugins>
+            <!-- BM- Maven Surefire plugin with ChromeDriver SystemProperty Configuration -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

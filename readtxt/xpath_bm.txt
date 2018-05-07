@@ -7,13 +7,17 @@ By.className()
 //*[@id="wd-_teaser"]/div/div/h1/a
 #wd-_teaser > div > div > h1 > a
 
----------
+--------- BM- searches from begining of the tree
 //a
 //a[@class='text']
 //a[contains(@class, 'text')]
 //span[text()='text']
 
+--------- BM- searches from current branch of the tree
 ./a
 ./a[@class='text']
 ./a[contains(@class, 'text')]
 ./span[text()='text']
+
+--------- Sibling
+//*[@id='but1']/following-sibling::input

@@ -4,7 +4,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-
+// BM- Injecting Listeners into your project
+// BM- This implementation works with ThirdTests.java class
 public class TestListener implements ITestListener {
 
     public void onTestStart(ITestResult iTestResult) {

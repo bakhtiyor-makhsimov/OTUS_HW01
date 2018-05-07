@@ -32,7 +32,7 @@ public class ThirdTests {
         webDriverWait = new WebDriverWait(driver, 10); //Explicit Wait
     }
 
-    @Test(enabled=true, groups = {"regression"}, dependsOnMethods = {"test2"})
+    @Test(enabled=true, groups = {"regression"}, dependsOnMethods = {"test2"}) //BM- Linking to Test Suites in texting.xml
     public void test1() throws InterruptedException {
 //        driver = new ChromeDriver();
         driver.get("http://book.theautomatedtester.co.uk/");
@@ -101,6 +101,22 @@ public class ThirdTests {
 
         webDriverWait.until(ExpectedConditions.textToBePresentInElement(textAreaAjax, expectedText)); //Waits up to 10 seconds until element is not present
         assertEquals(textAreaAjax.getText(), expectedText);
+
+    }
+    @Test
+    public void test4() throws InterruptedException {
+        driver.get("http://book.theautomatedtester.co.uk/");
+
+        WebElement secondLink = driver.findElement(By.xpath("//a[text()='Chapter2']"));
+        secondLink.click();
+        Thread.sleep(2000);
+
+        WebElement siblingButton = driver.findElement(By.xpath("//*[@id='but1']/following-sibling::input"));
+        siblingButton.click();
+        assertTrue(siblingButton.isDisplayed());
+        Thread.sleep(2000);
+
+
 
     }
 
