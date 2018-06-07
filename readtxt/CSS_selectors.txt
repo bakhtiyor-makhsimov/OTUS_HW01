@@ -1,0 +1,49 @@
+//*[@id="sb-social-toolbar-root"]/div[1]/div/button   //-> this is xPath
+
+-------
+#sb-social-toolbar-root > div.sb-skeleton-app > div > button //-> this is css
+
+//-> above css selector has following two tags:
+div
+button
+
+//-> above css selector also has following id:
+#sb-social-toolbar-root
+
+//-> above css selector also has following class:
+.sb-skeleton-app
+
+//-> above css selector could be shortened as follow by removing all tags between first tag and last tag and replacing with space:
+#sb-social-toolbar-root button  =>  $$("#sb-social-toolbar-root button")
+
+-------
+//-> finding elements by attribute and value [attibute='value']:
+ .sb-skeleton-app = [class='sb-skeleton-app']
+ 
+//-> finding elements by using  part of the value:
+ div[class='long_value'] => [class*='value']
+
+-------
+//-> finding elements by id
+ 
+ #value => [id='value']
+ 
+-------
+//-> finding elements by using child .class-value:nth-child(n):
+ div .ember-view:nth-child(3)
+ div .ember-view:nth-last-child(2)
+ div .ember-view:last-child
+ 
+ //-> child syntax samples:
+ .tile:nth-child(#)
+ .tile:nth-last-child(#)
+ .tile:last-child(#)
+ .tile:nth-of-type(#)
+ .tile:nth-last-of-type(#)
+ .tile:last-of-type(#)
+ 
+ ------
+ 
+ 
+ 
+ 

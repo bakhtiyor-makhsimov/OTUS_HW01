@@ -1,31 +1,21 @@
-JUnit5
-<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-api</artifactId>
-    <version>5.1.0</version>
-    <scope>test</scope>
-</dependency>
+Adding Selenium library into Maven project:
+1) Google "Maven Central" and click on "https://mvnrepository.com/repos/central" in serach results 
+2) Search for "selenium webdriver" and click on "Selenium Java" in search results 
+3) Click on required version "3.11.0" 
+4) Copy/paste maven dependancy to your POM file
 
-JUnit4
-<!-- https://mvnrepository.com/artifact/junit/junit -->
-<dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.12</version>
-    <scope>test</scope>
-</dependency>
+-------
+Adding ChromeDriver into the project:
+1) Go to https://www.seleniumhq.org/
+2) Select "Download" tab
+3) Scroll down to "Third Party Drivers, Bindings, and Plugins" section and click on "Google Chrome Driver" link
+4) Select required version of ChromeDriver by changing version number: https://chromedriver.storage.googleapis.com/index.html?path=2.36/
 
-TestNG
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>6.14.2</version>
-    <scope>test</scope>
-</dependency>
+-------
+Maven Surefire Plugin to set System Properties:
+1) Google "maven surefire plugin system properties" and click on "http://maven.apache.org/surefire/maven-surefire-plugin/examples/system-properties.html" in serach results
+2) Copy/paste "systemPropertyVariables" section into your POM file
 
-How to Set Properties for ChromeDriver
 <build>
     <plugins>
         <plugin>
@@ -41,3 +31,33 @@ How to Set Properties for ChromeDriver
         </plugin>
     </plugins>
 </build>
+
+-------
+JUnit5
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.1.0</version>
+    <scope>test</scope>
+</dependency>
+-------
+JUnit4
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+
+------
+TestNG
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.14.2</version>
+    <scope>test</scope>
+</dependency>
+

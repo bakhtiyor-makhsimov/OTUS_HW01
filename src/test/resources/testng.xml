@@ -4,7 +4,7 @@
 <suite name="Suite1" verbose="10" >
     <test name="Nopackage" >
         <packages>
-                <package name="tests.*">
+                <package name="uk.tests.*">
         </packages>
 
         <groups>
@@ -16,7 +16,7 @@
 
 
         <!--<classes>-->
-            <!--<class name="tests.ThirdTests">-->
+            <!--<class name="uk.tests.ThirdTests">-->
                 <!--<methods>-->
                     <!--<include name="test1" />-->
                     <!--<include name="test2" />-->

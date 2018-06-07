@@ -1,4 +1,4 @@
-package tests;
+package uk.tests;
 
 
 import org.junit.*;
@@ -27,7 +27,7 @@ public class FirstTest {
         WebElement inputPassword = driver.findElement(By.name("passwd"));
         inputPassword.sendKeys("secretpassword");
 
-        WebElement buttonSubmit = driver.findElement(By.cssSelector("button[type='submit]"));
+        WebElement buttonSubmit = driver.findElement(By.cssSelector("button[type='submit']"));
         buttonSubmit.click();
         Thread.sleep(2000);
 
